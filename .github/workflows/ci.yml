@@ -13,16 +13,9 @@ jobs:
       steps:
         - name: Checkout
           uses: actions/checkout@v2
-          
-        - name: Install PHP with extensions
-          uses: shivammathur/setup-php@v2
-          with:
-            php-version: 8.0
-            coverage: xdebug3
-            tools: none
             
         - name: Install dependencies with composer
-          run: php ./tools/composer update --no-ansi --no-interaction --no-progress
+          run: composer update --no-ansi --no-interaction --no-progress
           
           
         - name: Run tests with phpunit/phpunit
