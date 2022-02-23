@@ -29,7 +29,7 @@ jobs:
           run: vendor/bin/phpunit --coverage-clover=coverage.xml
           
         - name: Fix code coverage paths
-          run: sed -i 's/\/home\/runner\/nils-werner-sonarsource\/php-coverage-test\//\/github\/workspace\//g' sonar-cloud-reporter.xml
+          run: sed -i 's/\/home\/runner\/nils-werner-sonarsource\/php-coverage-test\//\/github\/workspace\//g' coverage.xml
           
         - name: SonarCloud Scan
           uses: SonarSource/sonarcloud-github-action@master
