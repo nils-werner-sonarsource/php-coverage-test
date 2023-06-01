@@ -19,4 +19,9 @@ class Component
             return false;
         }
     }
+
+    public function doSomethingElse(int $input): void
+    {
+        echo $input;
+    }
 }
